@@ -1,7 +1,11 @@
 require './src/apple'
+require './src/pear'
+require './src/cherry'
+require './src/apricot'
+require './src/fruit'
 
 describe 'apple' do
-  let(:apple) { Apple.new }
+  let(:apple) { Apple.new(:height => 1) }
 
   it 'creates a apple tree' do
     expect(apple).to be_instance_of(Apple)
@@ -10,10 +14,18 @@ describe 'apple' do
   it 'has fruits' do
     expect(apple.has_fruits).to be_kind_of(Array)
   end
+
+  it 'has a height' do
+    expect(apple.height).to eq 1
+  end
+
+  it 'has a age' do
+    expect(apple.age).to eq 0
+  end
 end
 
 describe 'pear' do
-  let(:pear) { Pear.new }
+  let(:pear) { Pear.new(age: 2, height: 2) }
 
   it 'creates a pear tree' do
     expect(pear).to be_instance_of(Pear)
@@ -21,6 +33,14 @@ describe 'pear' do
 
   it 'has fruits' do
     expect(pear.has_fruits).to be_kind_of(Array)
+  end
+
+  it 'has a height' do
+    expect(pear.height).to eq 2
+  end
+
+  it 'has a age' do
+    expect(pear.age).to eq 2
   end
 end
 
@@ -34,6 +54,14 @@ describe 'cherry' do
   it 'has fruits' do
     expect(cherry.has_fruits).to be_kind_of(Array)
   end
+
+  it 'has a height' do
+    expect(cherry.height).to eq 0
+  end
+  
+  it 'has a age' do
+    expect(cherry.age).to eq 0
+  end
 end
 
 describe 'apricot' do
@@ -45,5 +73,13 @@ describe 'apricot' do
 
   it 'has fruits' do
     expect(apricot.has_fruits).to be_kind_of(Array)
+  end
+
+  it 'has a height' do
+    expect(apricot.height).to eq 0
+  end
+
+  it 'has a age' do
+    expect(apricot.age).to eq 0
   end
 end

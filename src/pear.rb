@@ -1,6 +1,6 @@
 require './src/tree'
 
-class Apple < Tree
+class Pear < Tree
 
   def initialize(params = {})
     super
