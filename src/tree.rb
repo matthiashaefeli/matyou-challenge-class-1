@@ -5,6 +5,7 @@ attr_accessor :fruits, :height, :age
     @fruits = params.fetch(:fruits, [])
     @height = params.fetch(:height, 0)
     @age = params.fetch(:age, 0)
+    @alive = true
   end
 
   def has_fruits
@@ -17,6 +18,18 @@ attr_accessor :fruits, :height, :age
 
   def age
     @age
+  end
+
+  def alive
+    @alive
+  end
+
+  def grow
+    @age += 1
+  end
+
+  def will_die
+    @alive = false
   end
 
 end
