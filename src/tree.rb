@@ -32,4 +32,8 @@ attr_accessor :fruits, :height, :age
     @alive = false
   end
 
+  def get_fruits
+    @fruits = []
+  end
+
 end
